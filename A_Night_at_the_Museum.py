@@ -5,18 +5,7 @@ current = 97
 
 for chr in name:
     ascii = ord(chr)
-
-    if abs(current - ascii) >= 13 and current < ascii:
-        step += abs((current + 26) - ascii)
-        current = ascii
-
-    elif abs(current - ascii) >= 13 and current > ascii:
-        step += abs(current  - (ascii + 26))
-        current = ascii
-    else:
-        step += abs(ascii - current)
-        current = ascii
+    step += min(abs(ascii - current), 26 - abs(current - ascii))
+    current = ascii
 
 print(step)
-
-    
