@@ -1,9 +1,11 @@
 n = int(input())
-for i in range(n):
-    print(" "*(n*2)+str(i)+" "*(n*2))
-    n-=2
-for i in range(n+1):
-    print(" "*(n*2)+str(n-i)+" "*(n*2))
 
+for i in  range(-n , n+1):
+    spaces = " " * (2 * abs(i))
+    nums1 = [str(x) for x in range(n - abs(i) + 1)]
+    nums2 = [str(x) for x in range(n - abs(i) -1,-1,-1)]
 
+    row_content = " ".join(nums1 + nums2)
+
+    print(spaces + row_content)
 
