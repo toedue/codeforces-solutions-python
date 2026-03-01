@@ -13,5 +13,5 @@ for _ in range(t):
 
     for l, r, real in casinos:
         if r >= k >= l:
-            k = real
+            k = max(k , real)
     print(k)
