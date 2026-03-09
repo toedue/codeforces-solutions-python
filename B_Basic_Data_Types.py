@@ -8,7 +8,6 @@ c = c          # char stays as string
 f = float(f)
 d = float(d)
 
-# Print in required format
 print(i)
 print(ll)
 print(c)
